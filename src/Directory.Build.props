@@ -1,12 +1,14 @@
 <Project>
-  <!--<UsingTask TaskName="LocateSteamAppTask" AssemblyFile="$(MSBuildThisFileDirectory)..\tools\LocateSteamApp.dll"/>-->
-  <PropertyGroup>
+
+  <!--<PropertyGroup>
     <BannerlordDir>E:\Games\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord</BannerlordDir>
-  </PropertyGroup>
-  <Target Name="LocateBannerlord" BeforeTargets="Build;Compile;CoreCompile;BeforeResolveReferences;ResolveAssemblyReferences">
-    <!--<LocateSteamAppTask AppId="261550">
-            <Output TaskParameter="Path" PropertyName="BannerlordDir"/>
-        </LocateSteamAppTask>-->
+  </PropertyGroup>-->
+
+  <UsingTask TaskName="LocateSteamAppTask" AssemblyFile="$(MSBuildThisFileDirectory)..\tools\LocateSteamApp.dll"/>
+  <Target Name="LocateBannerlord" BeforeTargets="Build;Compile;CoreCompile;BeforeResolveReferences;ResolveAssemblyReferences">   
+    <LocateSteamAppTask AppId="261550">
+      <Output TaskParameter="Path" PropertyName="BannerlordDir"/>
+    </LocateSteamAppTask>
 
 
     <Message Importance="high" Text="BannerlordDir: $(BannerlordDir)"/>
