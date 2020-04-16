@@ -8,12 +8,17 @@
     <Configurations>Release;Debug</Configurations>
     <Platforms>x64</Platforms>
   </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>$(BannerlordDir)\Modules\MBModsSettings\bin\Win64_Shipping_Client\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.0.0.9" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/**/*.*" Link="..\..\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="packages.config" />
+    <None Include="Assets/**/*.*" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TaleWorlds.ModdingCommunity.ModsSettingsProvider\TaleWorlds.ModdingCommunity.ModsSettingsProvider.csproj" />

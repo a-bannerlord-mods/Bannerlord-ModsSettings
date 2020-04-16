@@ -6,6 +6,6 @@
         <Platform>x64</Platform>
         <PlatformTarget>x64</PlatformTarget>
         <Configurations>Release;Debug</Configurations>
-        <Platforms>x64</Platforms>
+        <Platforms>x64;AnyCPU</Platforms>
     </PropertyGroup>
 </Project>
