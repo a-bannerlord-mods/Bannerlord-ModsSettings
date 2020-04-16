@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+  <Name value="Mods Settings"/>
+  <Id value="MBModsSettings"/>
+  <Version value="v0.0.2"/>
+  <DefaultModule value="false"/>
+  <SingleplayerModule value="true"/>
+  <MultiplayerModule value="false"/>
+  <Official value="false"/>
+  <DependedModules>
+    <DependedModule Id="Native"/>
+    <DependedModule Id="SandBoxCore"/>
+    <DependedModule Id="Sandbox"/>
+    <DependedModule Id="CustomBattle"/>
+    <DependedModule Id="StoryMode" />
+  </DependedModules>
+  <SubModules>
+    <SubModule>
+      <Name value="MBModsSettings"/>
+      <DLLName value="TaleWorlds.ModdingCommunity.ModsSettings.dll"/>
+      <SubModuleClassType value="TaleWorlds.ModdingCommunity.ModsSettings.ModsSettingsSubModule"/>
+      <Tags>
+        <Tag key="DedicatedServerType" value="none"/>
+        <Tag key="IsNoRenderModeElement" value="false"/>
+      </Tags>
+    </SubModule>
+  </SubModules>
+  <Xmls>
+  </Xmls>
+  <ModSettings>
+    <ModSelectSettings>
+      <ModSelectSetting Key="DebugLevel" Order="3" SelectList="Info,Warning,Error" Text="Debug Level" Description="Level of debug should Logged" DefaultValue="0"/>
+    </ModSelectSettings>
+    <ModToggleSettings>
+      <ModToggleSetting Key="EnableDebug" Order="2" Text="Enable Debug" Description="Enable Mod Debug Messages" DefaultValue="0"/>
+    </ModToggleSettings>
+  </ModSettings>
+</Module>

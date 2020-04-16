@@ -1,0 +1,14 @@
+<Prefab>
+  <Constants>
+    
+  </Constants>
+  <Window>
+    <Widget WidthSizePolicy = "StretchToParent" HeightSizePolicy = "StretchToParent" IsVisible="@ShowEnemyHealthBar">
+      <Children>
+        <TextWidget Brush="EnemyName"  HorizontalAlignment="Center" VerticalAlignment="Top" SuggestedWidth="250" MarginTop="30"  Text="@EnemyName"   />
+        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="220" SuggestedHeight="18" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="50" PositionYOffset="-5" Sprite="HintBG@2x_9" IsVisible="@ShowEnemyHealthBar" />
+        <FillBar WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="210" SuggestedHeight="8"   HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="50"  Brush="HealthBarBrush" InitialAmount="@EnemyHealth"  MaxAmount="@EnemyHealthMax" IsVertical="false" IsVisible="@ShowEnemyHealthBar" />
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>
