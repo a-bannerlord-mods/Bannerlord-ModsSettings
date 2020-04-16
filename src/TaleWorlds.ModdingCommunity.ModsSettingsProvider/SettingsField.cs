@@ -3,54 +3,6 @@ using TaleWorlds.Library;
 
 namespace TaleWorlds.ModdingCommunity.ModsSettingsProvider
 {
-    public class BooleanSettingsFieldViewModel : SettingsField
-    {
-        private bool _optionValue;
-
-        // Token: 0x06000C3C RID: 3132 RVA: 0x0002A1D4 File Offset: 0x000283D4
-        //public BooleanOptionDataVM(OptionsVM optionsVM, IBooleanOptionData option, TextObject name, TextObject description) : base(optionsVM, option, name, description, OptionsVM.OptionsDataType.BooleanOption)
-        //{
-        //	this._booleanOptionData = option;
-        //	this._initialValue = option.GetValue().Equals(1f);
-        //	this.OptionValueAsBoolean = this._initialValue;
-        //}
-
-        // Token: 0x17000418 RID: 1048
-        // (get) Token: 0x06000C3D RID: 3133 RVA: 0x0002A219 File Offset: 0x00028419
-        // (set) Token: 0x06000C3E RID: 3134 RVA: 0x0002A221 File Offset: 0x00028421
-        [DataSourceProperty]
-        public bool OptionValueAsBoolean
-        {
-            get
-            {
-                return this._optionValue;
-            }
-            set
-            {
-                if (value != this._optionValue)
-                {
-                    this._optionValue = value;
-                    base.OnPropertyChanged("OptionValueAsBoolean");
-
-                }
-            }
-        }
-
-        public override object GetDefaultValue()
-        {
-            return default(bool);
-        }
-
-        public override object GetValue()
-        {
-            return OptionValueAsBoolean;
-        }
-
-        public override void SetValue(object value)
-        {
-            OptionValueAsBoolean = (bool)value;
-        }
-    }
 
     public abstract class SettingsField : ViewModel, IOptionData
     {
