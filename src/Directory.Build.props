@@ -1,0 +1,39 @@
+<Project>
+    <UsingTask TaskName="LocateSteamAppTask" AssemblyFile="$(MSBuildThisFileDirectory)..\tools\LocateSteamApp.dll"/>
+    <Target Name="LocateBannerlord" BeforeTargets="Restore;Build;Compile;CoreCompile;BeforeResolveReferences;ResolveAssemblyReferences">
+        <LocateSteamAppTask AppId="261550">
+            <Output TaskParameter="Path" PropertyName="BannerlordDir"/>
+        </LocateSteamAppTask>
+        
+        <Message Importance="high" Text="BannerlordDir: $(BannerlordDir)"/>
+        
+        <!-- references to bannerlord libraries go here -->
+        
+        <ItemGroup>
+            <Reference Include="$(BannerlordDir)\bin\Win64_Shipping_Client\System.*.dll">
+                <HintPath>%(Identity)</HintPath>
+                <Private>False</Private>
+            </Reference>
+            <Reference Include="$(BannerlordDir)\bin\Win64_Shipping_Client\TaleWorlds.*.dll">
+                <HintPath>%(Identity)</HintPath>
+                <Private>False</Private>
+            </Reference>
+            <Reference Include="$(BannerlordDir)\bin\Win64_Shipping_Client\Steamworks.*.dll">
+                <HintPath>%(Identity)</HintPath>
+                <Private>False</Private>
+            </Reference>
+            <Reference Include="$(BannerlordDir)\bin\Win64_Shipping_Client\Mono.*.dll">
+                <HintPath>%(Identity)</HintPath>
+                <Private>False</Private>
+            </Reference>
+            <Reference Include="$(BannerlordDir)\Modules\Native\bin\Win64_Shipping_Client\*.dll">
+                <HintPath>%(Identity)</HintPath>
+                <Private>False</Private>
+            </Reference>
+            <Reference Include="$(BannerlordDir)\Modules\SandBox\bin\Win64_Shipping_Client\*.dll">
+                <HintPath>%(Identity)</HintPath>
+                <Private>False</Private>
+            </Reference>
+        </ItemGroup>
+    </Target>
+</Project>
