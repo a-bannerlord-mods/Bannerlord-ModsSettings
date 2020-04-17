@@ -56,14 +56,14 @@ namespace TaleWorlds.ModdingCommunity.ModsSettings.ViewModels
             locator = new TestLocator();
 
 
-            this.modOptionsCategory = new ModOptionsCategoryViewModel(this, locator.GetProvidedModSettings());// should get the acual mods instead from any class implement ISettingsProvider
+            this.modOptionsCategory = new ModOptionsCategoryViewModel(this, locator.GetProvidedModSettings(this));// should get the acual mods instead from any class implement ISettingsProvider
         }
 
         public OptionsWithModsViewModel(bool openedFromMultiplayer, Action onClose, Action<GameKeyOptionVM> onKeybindRequest, Action onBrightnessExecute = null) : base(openedFromMultiplayer, onClose, onKeybindRequest, onBrightnessExecute)
         {
             locator = new TestLocator();
 
-            this.modOptionsCategory = new ModOptionsCategoryViewModel(this, locator.GetProvidedModSettings());// should get the acual mods instead from any class implement ISettingsProvider
+            this.modOptionsCategory = new ModOptionsCategoryViewModel(this, locator.GetProvidedModSettings(this));// should get the acual mods instead from any class implement ISettingsProvider
 
         }
     }
