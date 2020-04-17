@@ -10,14 +10,14 @@
   <Window>
     <Widget Id="OptionsInnerPanel" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="10" MarginBottom="10" LayoutImp.LayoutMethod="VerticalBottomToTop">
       <Children>
-        <Widget Id="sss" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Widget  Id="@Name" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top">
           <Children>
             <ListPanel DataSource="{ModSettings}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="50" MarginBottom="200" LayoutImp.LayoutMethod="VerticalBottomToTop">
               <ItemTemplate>
-                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginBottom="80" LayoutImp.LayoutMethod="VerticalBottomToTop">
+                <ListPanel  WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" MarginBottom="80" LayoutImp.LayoutMethod="VerticalBottomToTop">
                   <Children>
 
-                    <PartyHeaderToggleWidget DoNotPassEventsToChildren="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginLeft="80" MarginRight="10" CollapseIndicator="Description\CollapseParent\GroupTitle\CollapseIndicator" ListPanel="..\GameKeysList" RenderLate="true" UpdateChildrenStates="true" WidgetToClose="..\GameKeysList">
+                    <PartyHeaderToggleWidget DoNotPassEventsToChildren="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginLeft="120" MarginRight="10" CollapseIndicator="Description\CollapseParent\GroupTitle\CollapseIndicator" ListPanel="..\GameKeysList" RenderLate="true" UpdateChildrenStates="true" WidgetToClose="..\GameKeysList">
                       <Children>
 
                         <ListPanel Id="Description" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" LayoutImp.LayoutMethod="HorizontalLeftToRight" UpdateChildrenStates="true">
@@ -25,7 +25,7 @@
 
                             <Widget Id="CollapseParent" WidthSizePolicy="Fixed" HeightSizePolicy="CoverChildren" SuggestedWidth="450" HorizontalAlignment="Center" UpdateChildrenStates="true">
                               <Children>
-                                <TextWidget Id="GroupTitle" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" Brush="SPOptions.GameKeysGroup.Title.Text" Text="@ModName" ClipContents="false">
+                                <TextWidget Id="GroupTitle" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" Brush="SPOptions.GameKeysGroup.Title.Text" Text="@Description" ClipContents="false">
                                   <Children>
                                     <ImageWidget Id="CollapseIndicator" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="19" SuggestedWidth="19" VerticalAlignment="Center" PositionXOffset="-26" PositionYOffset="-3" Brush="SPOptions.GameKeysgroup.ExpandIndicator" OverrideDefaultStateSwitchingEnabled="true" />
                                   </Children>
@@ -42,10 +42,11 @@
 
 
 
-                    <ListPanel DataSource="{ModSettingsList}" MarginLeft="40" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top"  LayoutImp.LayoutMethod="VerticalBottomToTop">
+
+                    <ListPanel Id="GameKeysList" DataSource="{ModSettingsList}" MarginLeft="40" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top"  LayoutImp.LayoutMethod="VerticalBottomToTop">
                       <ItemTemplate>
 
-                        <OptionsItemWidget Id="OptionItem" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="50" ActionOption="ListPanel\Option\ActionOption" BooleanOption="ListPanel\Option\BooleanOption" GameKeyOption="ListPanel\Option\GameKeyOption" ImageIDs="@ImageIDs" InputOption="ListPanel\Option\InputOption" NumericOption="ListPanel\Option\NumericOption" OptionDescription="@Description" OptionTitle="@Name" OptionTypeID="@OptionTypeID" StringOption="ListPanel\Option\StringOption">
+                        <ModOptionsItemWidget Id="OptionItem" WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="50" ActionOption="ListPanel\Option\ActionOption" BooleanOption="ListPanel\Option\BooleanOption" GameKeyOption="ListPanel\Option\GameKeyOption" ImageIDs="@ImageIDs" InputOption="ListPanel\Option\InputOption" NumericOption="ListPanel\Option\NumericOption" OptionDescription="@Description" OptionTitle="@Name" OptionTypeID="@OptionTypeID" StringOption="ListPanel\Option\StringOption">
                           <Children>
 
                             <ListPanel Id="ListPanel" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" LayoutImp.LayoutMethod="HorizontalLeftToRight">
@@ -111,7 +112,7 @@
                             </ListPanel>
 
                           </Children>
-                        </OptionsItemWidget>
+                        </ModOptionsItemWidget>
 
                       </ItemTemplate>
                     </ListPanel>

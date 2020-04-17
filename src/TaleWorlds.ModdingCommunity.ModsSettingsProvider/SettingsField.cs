@@ -8,9 +8,27 @@ namespace TaleWorlds.ModdingCommunity.ModsSettingsProvider
     {
         protected IOptionData Option;
 
+        object _optionTypeID;
+        [DataSourceProperty]
+        public object OptionTypeID
+        {
+            get
+            {
+                return this._optionTypeID;
+            }
+            set
+            {
+                if (value != this._optionTypeID)
+                {
+                    this._optionTypeID = value;
+                    base.OnPropertyChanged();
+                }
+            }
+        }
         public SettingsField()
         {
             Option = this;
+            OptionTypeID = this.GetOptionType();
         }
 
         public string Key { get; set; }
@@ -65,10 +83,8 @@ namespace TaleWorlds.ModdingCommunity.ModsSettingsProvider
             return (float)this.GetDefaultValue();
         }
 
-        public object GetOptionType()
-        {
-            return 0;
-        }
+        public abstract object GetOptionType();
+
 
 
         public bool IsNative()
@@ -78,7 +94,7 @@ namespace TaleWorlds.ModdingCommunity.ModsSettingsProvider
 
 
 
-        public void SetValue(float value)
+        void IOptionData.SetValue(float value)
         {
             SetValue(value);
         }
