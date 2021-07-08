@@ -3,44 +3,65 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaleWorlds.ModdingCommunity.ModsSettings", "src\TaleWorlds.ModdingCommunity.ModsSettings\TaleWorlds.ModdingCommunity.ModsSettings.csproj", "{3AFB807E-0D94-42BE-844B-DAB15409BEA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaleWorlds.ModdingCommunity.ModsSettings", "src\TaleWorlds.ModdingCommunity.ModsSettings\TaleWorlds.ModdingCommunity.ModsSettings.csproj", "{3AFB807E-0D94-42BE-844B-DAB15409BEA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaleWorlds.ModdingCommunity.ModsSettingsProvider", "src\TaleWorlds.ModdingCommunity.ModsSettingsProvider\TaleWorlds.ModdingCommunity.ModsSettingsProvider.csproj", "{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaleWorlds.ModdingCommunity.ModsSettingsProvider", "src\TaleWorlds.ModdingCommunity.ModsSettingsProvider\TaleWorlds.ModdingCommunity.ModsSettingsProvider.csproj", "{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaleWorlds.ModdingCommunity.ModsSettings.XMLDefined", "src\TaleWorlds.ModdingCommunity.ModsSettings.XMLDefined\TaleWorlds.ModdingCommunity.ModsSettings.XMLDefined.csproj", "{2A78ACA8-4DD3-4978-8A70-8AD231253576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaleWorlds.ModdingCommunity.ModsSettings.XMLDefined", "src\TaleWorlds.ModdingCommunity.ModsSettings.XMLDefined\TaleWorlds.ModdingCommunity.ModsSettings.XMLDefined.csproj", "{2A78ACA8-4DD3-4978-8A70-8AD231253576}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{62D77C02-3354-4B7E-B59F-0DFD3DA0315E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mods", "Mods", "{A80C6ADB-A1AE-4759-BE6A-3818FB4803F1}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{69BAF44D-36FC-4203-A012-CFC32A1764ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{49628314-FC81-4804-AD9B-DA93C6AEED2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaleWorlds.ModdingCommunity.ModsSettings.Tests", "src\TaleWorlds.ModdingCommunity.ModsSettings.Tests\TaleWorlds.ModdingCommunity.ModsSettings.Tests.csproj", "{A17C43F8-7AD1-47EB-96D7-E103780821C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaleWorlds.ModdingCommunity.ModsSettings.Tests", "src\TaleWorlds.ModdingCommunity.ModsSettings.Tests\TaleWorlds.ModdingCommunity.ModsSettings.Tests.csproj", "{A17C43F8-7AD1-47EB-96D7-E103780821C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Debug|x64.ActiveCfg = Debug|x64
+		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Debug|x64.Build.0 = Debug|x64
 		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Release|x64.ActiveCfg = Release|x64
+		{3AFB807E-0D94-42BE-844B-DAB15409BEA8}.Release|x64.Build.0 = Release|x64
 		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Debug|x64.ActiveCfg = Debug|x64
+		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Debug|x64.Build.0 = Debug|x64
 		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Release|x64.ActiveCfg = Release|x64
+		{EBD84DE2-0717-4E0A-B5C7-0E942E45C7AF}.Release|x64.Build.0 = Release|x64
 		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Debug|x64.ActiveCfg = Debug|x64
+		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Debug|x64.Build.0 = Debug|x64
 		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Release|x64.ActiveCfg = Release|x64
+		{2A78ACA8-4DD3-4978-8A70-8AD231253576}.Release|x64.Build.0 = Release|x64
 		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Debug|x64.ActiveCfg = Debug|x64
+		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Debug|x64.Build.0 = Debug|x64
 		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Release|x64.ActiveCfg = Release|x64
+		{A17C43F8-7AD1-47EB-96D7-E103780821C8}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

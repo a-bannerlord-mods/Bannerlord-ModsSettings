@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TaleWorlds.ModdingCommunity.ModsSettings": {
+      "commandName": "Executable",
+      "executablePath": "$(BannerlordDir)\\bin\\Win64_Shipping_Client\\Bannerlord.exe",
+      "commandLineArgs": "/singleplayer _MODULES_*Native*SandBoxCore*CustomBattle*SandBox*StoryMode*MBModsSettings*_MODULES_",
+      "workingDirectory": "$(BannerlordDir)\\bin\\Win64_Shipping_Client\\"
+    }
+  }
+}

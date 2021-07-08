@@ -28,7 +28,7 @@ namespace TaleWorlds.ModdingCommunity.ModsSettings.ViewModels
             get { return modSettingsList; }
             set { modSettingsList = value; OnPropertyChanged(); }
         }
-        public virtual void RefreshValues()
+        public override void RefreshValues()
         {
             //  ModOptionLists.RefreshValues();
         }
